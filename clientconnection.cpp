@@ -34,8 +34,26 @@ void ClientConnection::recibirData(){
     dataSize = 0;
 }
 
-void ClientConnection::parseMessage(QByteArray){
+void ClientConnection::parseMessage(QByteArray dataArray){
+    quint8 tipo;
+    QString mText;
+    QList<QString> lista;
+    QImage tempImage;
 
+    QDataStream stream(dataArray);
+    stream.setVersion(QDataStream::Qt_5_0);
+    stream >> tipo;
+
+    switch(tipo){
+    case 'M':
+        stream >> mText;
+        emit newStringMessage(mText);
+        qDebug() << "[Parse Message] : Mensaje de Texto: " << mText;
+        default:
+        //Print whatever they sent
+        stream >> mText;
+        emit newStringMessage(mText);
+    }
 }
 
 void ClientConnection::conectado(){

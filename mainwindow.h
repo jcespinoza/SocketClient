@@ -19,6 +19,12 @@ public:
 private:
     Ui::MainWindow *ui;
     ClientConnection *cc;
+private slots:
+    void confirmConnected();
+    void confirmDisconnected();
+    void processError(QString, QString);
+    void processStringMessage(QString);
+    void processImage(QString, QImage);
 };
 
 #endif // MAINWINDOW_H
