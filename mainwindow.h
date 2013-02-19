@@ -25,6 +25,9 @@ private slots:
     void processError(QString, QString);
     void processStringMessage(QString);
     void processImage(QString, QImage);
+    void on_pbConnect_clicked();
+    void on_pbDisconnect_clicked();
+    void on_leCommand_returnPressed();
 };
 
 #endif // MAINWINDOW_H

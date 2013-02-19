@@ -32,7 +32,7 @@
       </widget>
      </item>
      <item>
-      <widget class="QLineEdit" name="lineEdit"/>
+      <widget class="QLineEdit" name="leUser"/>
      </item>
      <item>
       <widget class="QLabel" name="label_2">
@@ -42,7 +42,7 @@
       </widget>
      </item>
      <item>
-      <widget class="QLineEdit" name="lineEdit_2"/>
+      <widget class="QLineEdit" name="lePass"/>
      </item>
      <item>
       <widget class="QPushButton" name="pbConnect">
@@ -71,9 +71,9 @@
       </widget>
      </item>
      <item>
-      <widget class="QLineEdit" name="lineEdit_3">
+      <widget class="QLineEdit" name="leHost">
        <property name="text">
-        <string>localhost</string>
+        <string>www.google.hn</string>
        </property>
       </widget>
      </item>
@@ -85,9 +85,9 @@
       </widget>
      </item>
      <item>
-      <widget class="QLineEdit" name="lineEdit_4">
+      <widget class="QLineEdit" name="lePort">
        <property name="text">
-        <string>7777</string>
+        <string>80</string>
        </property>
       </widget>
      </item>
@@ -113,7 +113,7 @@
      <string>PushButton</string>
     </property>
    </widget>
-   <widget class="QLineEdit" name="lineEdit_5">
+   <widget class="QLineEdit" name="leCommand">
     <property name="geometry">
      <rect>
       <x>10</x>
