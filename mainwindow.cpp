@@ -53,7 +53,7 @@ void MainWindow::on_pbConnect_clicked()
 
 void MainWindow::on_pbDisconnect_clicked()
 {
-
+    cc->desconectar();
 }
 
 void MainWindow::on_leCommand_returnPressed()
