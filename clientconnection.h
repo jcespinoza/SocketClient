@@ -9,7 +9,7 @@ class ClientConnection: public QObject
 {
     Q_OBJECT
 public:
-    explicit ClientConnection(QObject *parent);
+    explicit ClientConnection(QObject *parent=0);
 
     void sendMessage(QString);
     void conectar(QString, int port);

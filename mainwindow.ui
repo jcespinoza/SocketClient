@@ -73,7 +73,7 @@
      <item>
       <widget class="QLineEdit" name="leHost">
        <property name="text">
-        <string>www.google.hn</string>
+        <string>localhost</string>
        </property>
       </widget>
      </item>
@@ -87,7 +87,7 @@
      <item>
       <widget class="QLineEdit" name="lePort">
        <property name="text">
-        <string>80</string>
+        <string>7777</string>
        </property>
       </widget>
      </item>

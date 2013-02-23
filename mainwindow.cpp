@@ -33,17 +33,23 @@ void MainWindow::confirmDisconnected(){
 }
 
 
-void MainWindow::processError(QString tittle, QString body){
-
+void MainWindow::processError(QString title, QString body){
+    ui->teMessages->append(title);
 }
 
 void MainWindow::processStringMessage(QString message){
-    ui->teMessages->append("NewStringMessage: " + message);
+    ui->teMessages->append("Mensaje: " + message);
     ui->lbImage->clear();
 }
 
 void MainWindow::processImage(QString message, QImage img){
-
+    ui->teMessages->append(message);
+    if( !img.isNull() )
+    {
+        ui->lbImage->setPixmap(QPixmap::fromImage(img));
+    }
+    else
+        this->ui->lbImage->setText( "Invalid image received!" );
 }
 
 void MainWindow::on_pbConnect_clicked()

@@ -1,7 +1,7 @@
 #include "clientconnection.h"
 #include <QString>
 
-ClientConnection::ClientConnection(QObject *parent=0):QObject(parent)
+ClientConnection::ClientConnection(QObject *parent):QObject(parent)
 {
     socket = new QTcpSocket(this);
     connect(socket, SIGNAL(connected()), this, SLOT(conectado()));
@@ -49,7 +49,7 @@ void ClientConnection::parseMessage(QByteArray dataArray){
         stream >> mText;
         emit newStringMessage(mText);
         qDebug() << "[Parse Message] : Mensaje de Texto: " << mText;
-        default:
+    default:
         //Print whatever they sent
         stream >> mText;
         emit newStringMessage(mText);
