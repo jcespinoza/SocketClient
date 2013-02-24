@@ -14,7 +14,7 @@ public:
     void sendMessage(QString);
     void conectar(QString, int port);
     void desconectar();
-    ~ClientConnection(){delete socket;}
+    ~ClientConnection();
     bool isConnected(){return estaConectado;}
 private:
     QTcpSocket *socket;

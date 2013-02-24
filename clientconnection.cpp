@@ -102,3 +102,10 @@ void ClientConnection::conectar(QString host, int port){
     socket->abort();
     socket->connectToHost(host, port);
 }
+
+ClientConnection::~ClientConnection(){
+    desconectar();
+    qDebug() << "Disconnected Succesfully";
+    delete socket;
+    qDebug() << "Deleted the socket";
+}
