@@ -32,7 +32,11 @@
       </widget>
      </item>
      <item>
-      <widget class="QLineEdit" name="leUser"/>
+      <widget class="QLineEdit" name="leUser">
+       <property name="text">
+        <string>jc</string>
+       </property>
+      </widget>
      </item>
      <item>
       <widget class="QLabel" name="label_2">
@@ -42,7 +46,14 @@
       </widget>
      </item>
      <item>
-      <widget class="QLineEdit" name="lePass"/>
+      <widget class="QLineEdit" name="lePass">
+       <property name="inputMask">
+        <string>*</string>
+       </property>
+       <property name="text">
+        <string>*</string>
+       </property>
+      </widget>
      </item>
      <item>
       <widget class="QPushButton" name="pbConnect">

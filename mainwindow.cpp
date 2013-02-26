@@ -24,6 +24,8 @@ void MainWindow::confirmConnected(){
     ui->pbConnect->setDisabled(true);
     ui->pbDisconnect->setDisabled(false);
     ui->teMessages->append("Conexion aceptada...");
+    cc->sendMessage("LOGIN:"+ui->leUser->text()+ ":" +ui->lePass->text()+"\n\r");
+    ui->teMessages->append("Login in with " + ui->leUser->text() + " And " + ui->lePass->text());
 }
 
 void MainWindow::confirmDisconnected(){

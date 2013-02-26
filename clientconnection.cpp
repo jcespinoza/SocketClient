@@ -85,7 +85,7 @@ void ClientConnection::displayError(QAbstractSocket::SocketError sError){
         emit connectionError("Client", "Connection Refused");
         break;
     default:
-        emit connectionError("Client", tr("Error ocurred: %1").arg(socket->errorString()));
+        emit connectionError("Client8", "Error ocurred:" + socket->errorString());
     }
 }
 
