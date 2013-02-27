@@ -6,7 +6,7 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>781</width>
+    <width>782</width>
     <height>486</height>
    </rect>
   </property>
@@ -19,7 +19,7 @@
      <rect>
       <x>10</x>
       <y>10</y>
-      <width>641</width>
+      <width>531</width>
       <height>31</height>
      </rect>
     </property>
@@ -48,10 +48,10 @@
      <item>
       <widget class="QLineEdit" name="lePass">
        <property name="inputMask">
-        <string>*</string>
+        <string/>
        </property>
        <property name="text">
-        <string>*</string>
+        <string>pass</string>
        </property>
       </widget>
      </item>
@@ -69,7 +69,7 @@
      <rect>
       <x>10</x>
       <y>50</y>
-      <width>641</width>
+      <width>531</width>
       <height>31</height>
      </rect>
     </property>
@@ -110,19 +110,6 @@
       </widget>
      </item>
     </layout>
-   </widget>
-   <widget class="QPushButton" name="pushButton">
-    <property name="geometry">
-     <rect>
-      <x>660</x>
-      <y>10</y>
-      <width>111</width>
-      <height>23</height>
-     </rect>
-    </property>
-    <property name="text">
-     <string>PushButton</string>
-    </property>
    </widget>
    <widget class="QLineEdit" name="leCommand">
     <property name="geometry">
@@ -192,7 +179,7 @@
     <rect>
      <x>0</x>
      <y>0</y>
-     <width>781</width>
+     <width>782</width>
      <height>21</height>
     </rect>
    </property>

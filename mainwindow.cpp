@@ -36,7 +36,7 @@ void MainWindow::confirmDisconnected(){
 
 
 void MainWindow::processError(QString title, QString body){
-    ui->teMessages->append(title);
+    ui->teMessages->append(title + ":" + body);
 }
 
 void MainWindow::processStringMessage(QString message){

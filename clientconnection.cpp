@@ -22,7 +22,6 @@ void ClientConnection::recibirData(){
         if(socket->bytesAvailable() < sizeof(quint32))
             return;
          stream >> dataSize;
-         qDebug() << "DataSize: " << dataSize;
     }
     if(socket->bytesAvailable() < dataSize){
         qDebug() << "Bytes Available:" << socket->bytesAvailable() << "DataSize:" << dataSize;
@@ -48,7 +47,7 @@ void ClientConnection::parseMessage(QByteArray dataArray){
     case 'M':
         stream >> mText;
         emit newStringMessage(mText);
-        qDebug() << "[Parse Message] : Mensaje de Texto: " << mText;
+        break;
     default:
         //Print whatever they sent
         stream >> mText;
@@ -85,7 +84,7 @@ void ClientConnection::displayError(QAbstractSocket::SocketError sError){
         emit connectionError("Client", "Connection Refused");
         break;
     default:
-        emit connectionError("Client8", "Error ocurred:" + socket->errorString());
+        emit connectionError("Client", "Error ocurred:" + socket->errorString());
     }
 }
 
@@ -105,7 +104,5 @@ void ClientConnection::conectar(QString host, int port){
 
 ClientConnection::~ClientConnection(){
     desconectar();
-    qDebug() << "Disconnected Succesfully";
     delete socket;
-    qDebug() << "Deleted the socket";
 }
